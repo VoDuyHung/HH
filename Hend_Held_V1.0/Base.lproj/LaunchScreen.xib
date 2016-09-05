@@ -1,41 +1,54 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6214" systemVersion="14A314h" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6207"/>
-        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB">
-            <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="  Copyright (c) 2015 Toan Nguyen Duc. All rights reserved." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="8ie-xW-0ye">
-                    <rect key="frame" x="20" y="439" width="441" height="21"/>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="flast.png" translatesAutoresizingMaskIntoConstraints="NO" id="LwV-39-mKt">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading Handheld..." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bVN-4i-Iko">
+                    <rect key="frame" x="109" y="314" width="156" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="156" id="7kS-ZX-f00"/>
+                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="156" id="8bY-0I-QnD"/>
+                        <constraint firstAttribute="height" constant="21" id="mqn-et-QeZ"/>
+                    </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hend_Held_V1.0" textAlignment="center" lineBreakMode="middleTruncation" baselineAdjustment="alignBaselines" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="kId-c2-rCX">
-                    <rect key="frame" x="20" y="140" width="441" height="43"/>
-                    <fontDescription key="fontDescription" type="boldSystem" pointSize="36"/>
-                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
+                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="hCU-yZ-vv1">
+                    <rect key="frame" x="81" y="314" width="20" height="20"/>
+                    <color key="color" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                </activityIndicatorView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstItem="kId-c2-rCX" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="bottom" multiplier="1/3" constant="1" id="5cJ-9S-tgC"/>
-                <constraint firstAttribute="centerX" secondItem="kId-c2-rCX" secondAttribute="centerX" id="Koa-jz-hwk"/>
-                <constraint firstAttribute="bottom" secondItem="8ie-xW-0ye" secondAttribute="bottom" constant="20" id="Kzo-t9-V3l"/>
-                <constraint firstItem="8ie-xW-0ye" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" symbolic="YES" id="MfP-vx-nX0"/>
-                <constraint firstAttribute="centerX" secondItem="8ie-xW-0ye" secondAttribute="centerX" id="ZEH-qu-HZ9"/>
-                <constraint firstItem="kId-c2-rCX" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" symbolic="YES" id="fvb-Df-36g"/>
+                <constraint firstItem="hCU-yZ-vv1" firstAttribute="bottom" secondItem="bVN-4i-Iko" secondAttribute="bottom" constant="-1" id="72a-rK-n2e"/>
+                <constraint firstItem="LwV-39-mKt" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Gek-UX-xex"/>
+                <constraint firstItem="bVN-4i-Iko" firstAttribute="leading" secondItem="hCU-yZ-vv1" secondAttribute="trailing" constant="8" id="Kc1-z0-ICF"/>
+                <constraint firstItem="LwV-39-mKt" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="MLe-gD-R26"/>
+                <constraint firstAttribute="bottom" secondItem="LwV-39-mKt" secondAttribute="bottom" id="YEk-gO-LeX"/>
+                <constraint firstItem="bVN-4i-Iko" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="aK6-kS-AYh"/>
+                <constraint firstAttribute="bottom" secondItem="bVN-4i-Iko" secondAttribute="bottom" constant="332" id="tEc-nV-YFq"/>
+                <constraint firstAttribute="trailing" secondItem="LwV-39-mKt" secondAttribute="trailing" id="u5T-cS-UAG"/>
+                <constraint firstItem="hCU-yZ-vv1" firstAttribute="top" secondItem="bVN-4i-Iko" secondAttribute="top" id="ydG-SS-qvf"/>
+                <constraint firstItem="bVN-4i-Iko" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="314" id="yri-Zs-vMW"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
-            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="548" y="455"/>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+            <point key="canvasLocation" x="558.5" y="457.5"/>
         </view>
     </objects>
+    <resources>
+        <image name="flast.png" width="640" height="1136"/>
+    </resources>
 </document>
